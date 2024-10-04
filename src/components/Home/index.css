@@ -1,0 +1,11 @@
+.home-bg-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+}
+.main-heading{
+    font-weight: bold;
+    color: yellowgreen;
+}
