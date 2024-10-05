@@ -98,7 +98,7 @@ const SimpleTodos  =()=> {
     return (
       <div className="bg-container">
         <div className="container">
-          <h1 className="main-heading">Simple Todos</h1>
+          <h1 className="main-heading">Tack Your Tasks</h1>
           <div className="add-cont">
             <input
               type="text"
