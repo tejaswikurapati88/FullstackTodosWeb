@@ -1,0 +1,70 @@
+/* Write your CSS here */
+.main-save-button {
+  background-color: #ff8542;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  descent-override: 1px solid #ffffff;
+  border-radius: 10px;
+}
+.bg-container {
+  background-color: #ffc2a0;
+  font-family: 'Roboto';
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  overflow: scroll;
+}
+.container {
+  border: 0px solid;
+  border-radius: 15px;
+  min-height: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 80%;
+  margin-top: 10px;
+}
+.main-heading {
+  font-weight: bold;
+  font-size: 60px;
+  color: #ff8542;
+  text-align: center;
+}
+.add-cont {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  margin-bottom: 20px;
+}
+.input {
+  border: 2px solid #ff8542;
+  border-radius: 5px;
+  color: gray;
+  padding: 5px;
+  font-family: 'Roboto';
+  width: 300px;
+  height: 40px;
+  margin-left: 70px;
+  outline: none;
+}
+.add-button {
+  border: none;
+  border-radius: 5px;
+  background-color: #ff8542;
+  font-family: 'Roboto';
+  color: #ffffff;
+  padding: 5px;
+  width: 60px;
+  height: 40px;
+  margin-left: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}

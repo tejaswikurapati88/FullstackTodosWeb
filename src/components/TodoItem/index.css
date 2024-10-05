@@ -1,0 +1,47 @@
+/* Write your CSS here */
+.cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+li {
+  list-style-type: none;
+}
+
+.name {
+  color: #000000;
+  align-self: flex-start;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #ff0b37;
+  border-radius: 8px;
+  color: #ff0b37;
+  background-color: #ffffff;
+  padding: 10px;
+  align-self: flex-start;
+}
+.checkbox {
+  border: 2px solid;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+}
+.checked {
+  text-decoration: line-through;
+}
+.check-cont {
+  display: flex;
+  align-items: center;
+}
+.save-butn {
+  margin-right: 10px;
+  border: none;
+  background-color: #ff0b37;
+  color: #ffffff;
+}
