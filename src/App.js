@@ -6,13 +6,11 @@ import SigninPage from './components/SigninPage'
 import NotFound from './components/NotFound'
 import React from 'react'
 
-
-
 const App=()=> (
   <Routes>
     <Route exact path='/login' element = {<LoginPage/>} />
     <Route exact path="/signin" element ={<SigninPage/>} />
-    <Route exact path='/' element = {<SimpleTodos/>} />
+    <Route path='/' element={<SimpleTodos/>} />
     <Route element = {<NotFound/>} />
     
   </Routes>
