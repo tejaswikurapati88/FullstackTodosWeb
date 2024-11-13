@@ -64,7 +64,7 @@ const SigninPage = () => {
                 <label className='lable' htmlFor="passwordCon" >Confirmation Password</label>
                 <input className='input' value={conPass} onChange={(e) => {setConPass(e.target.value)}} id="passwordCon" type="password" />
                 <label className='lable' htmlFor="age" >Age</label>
-                <input className='input' value={age} onChange={(e) => {setGender(e.target.value)}} id="age" type="text" placeholder='age' />
+                <input className='input' value={age} onChange={(e) => {setAge(e.target.value)}} id="age" type="text" placeholder='age' />
                 <label className='lable' htmlFor="gender" >Gender</label>
                 <select onChange={((e) => {setGender(e.target.value)})} value={gender} id='gender' name='gender' >
                     <option>Select</option>
