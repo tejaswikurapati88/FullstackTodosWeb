@@ -1,10 +1,18 @@
 import {useEffect, useState} from 'react'
 import {v4 as uuidv4} from 'uuid'
 import TodoItem from '../TodoItem'
+import Cookies from 'js-cookie'
+import { useNavigate } from 'react-router-dom'
+
 
 import './index.css'
 
 const SimpleTodos  =()=> {
+  const navigagte= useNavigate()
+  const cookiejwtToken= Cookies.get('jwtToken')
+  if (cookiejwtToken === undefined){
+    navigagte('/login')
+  }
   const [todoList, setTodoList]= useState([])
   const [inpu, setInput]= useState('')
 
@@ -93,10 +101,15 @@ const SimpleTodos  =()=> {
     setTodoList(newUpdatedList)
   }
 
+  const onLogout=()=>{
+    Cookies.remove('jwtToken')
+  }
+
   
 
     return (
       <div className="bg-container">
+        <button className='logout' onClick={onLogout} type='button'>Logout</button>
         <div className="container">
           <h1 className="main-heading">Tack Your Tasks</h1>
           <div className="add-cont">

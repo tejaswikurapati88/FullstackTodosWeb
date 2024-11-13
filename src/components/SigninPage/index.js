@@ -12,31 +12,13 @@ const SigninPage = () => {
     const [errorMsg, setError]= useState('')
     const [isSucc, setisSucc]= useState(false)
 
-    const onNameChange=(e)=>{
-        setName(e.target.value)
-    }
-    const onUsernameChange=(e)=>{
-        setusername(e.target.value)
-    }
-    const onPassChange=(e)=>{
-        setPassword(e.target.value)
-    }
-    const onConPassChange=(e)=>{
-        setConPass(e.target.value)
-    }
-    const onAgeChange=(e)=>{
-        setAge(e.target.value)
-    }
-    const onSelGender=(e)=>{
-        setGender(e.target.value)
-    }
-
     const onRegistraion= async (eve)=>{
         eve.preventDefault()
         const userDetails={name, username, password, age, gender}
         if (name === '' || username === '' || password === '' || conPass==='' || age === '' || gender === ''){
             setError('*All feilds have to be filled')
-        }else if(password !== conPass) {
+        }else if (password !== conPass) {
+            console.log(password, conPass)
             setError('*Passwords should match')
         }
         else{
@@ -74,20 +56,20 @@ const SigninPage = () => {
         <h1 className='regis-heading'>Registration</h1>
             <form className='regis-form' onSubmit={onRegistraion} >
                 <label className='lable' htmlFor="name" >Name</label>
-                <input className='input' value={name} onChange={onNameChange} id="name" type="text" placeholder='Jhon Vison' />
+                <input className='input' value={name} onChange={(e) => {setName(e.target.value)}} id="name" type="text" placeholder='Jhon Vison' />
                 <label className='lable' htmlFor="userName" >username</label>
-                <input className='input' value={username} onChange={onUsernameChange} id="userName" type="text" placeholder='jhonvison' />
+                <input className='input' value={username} onChange={(e) => {setusername(e.target.value)}} id="userName" type="text" placeholder='jhonvison' />
                 <label className='lable' htmlFor="password" >Password</label>
-                <input className='input' value={password} onChange={onPassChange} id="password" type="password" placeholder='erfg%14a' />
+                <input className='input' value={password} onChange={(e) => {setPassword(e.target.value)}} id="password" type="password" placeholder='erfg%14a' />
                 <label className='lable' htmlFor="passwordCon" >Confirmation Password</label>
-                <input className='input' value={conPass} onChange={onConPassChange} id="passwordCon" type="password" />
+                <input className='input' value={conPass} onChange={(e) => {setConPass(e.target.value)}} id="passwordCon" type="password" />
                 <label className='lable' htmlFor="age" >Age</label>
-                <input className='input' value={age} onChange={onAgeChange} id="age" type="text" placeholder='age' />
+                <input className='input' value={age} onChange={(e) => {setGender(e.target.value)}} id="age" type="text" placeholder='age' />
                 <label className='lable' htmlFor="gender" >Gender</label>
-                <select onChange={onSelGender} value={gender} id='gender' name='gender' >
+                <select onChange={((e) => {setGender(e.target.value)})} value={gender} id='gender' name='gender' >
                     <option>Select</option>
-                    <option value='male' >Male</option>
-                    <option value='female' >Female</option>
+                    <option name='male' >Male</option>
+                    <option name='female' >Female</option>
                 </select>
                 <button className='submitButton' type='submit' >Register</button>
                 <p >{errorMsg}</p>
